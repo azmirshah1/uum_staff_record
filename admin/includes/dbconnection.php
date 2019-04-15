@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("Localhost", "root", "", "uum_staff_record");
+$con=mysqli_connect("Localhost", "root", "", "testproject");
 if(mysqli_connect_errno()){
 echo "Connection Fail".mysqli_connect_error();
 }

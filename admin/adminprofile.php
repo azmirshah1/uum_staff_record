@@ -79,7 +79,7 @@ if(isset($_POST['submit']))
 <form class="user" method="post" action="">
   <?php
 $adminid=$_SESSION['aid'];
-$ret=mysqli_query($con,"select * from tbladmin where ID='$adminid'");
+$ret=mysqli_query($con,"select * from admin where ID='$adminid'");
 $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 

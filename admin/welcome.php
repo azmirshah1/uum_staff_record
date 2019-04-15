@@ -6,6 +6,7 @@ if(strlen($_SESSION['aid']==0)){
 }
 else {
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +59,7 @@ else {
           <!-- Content Row -->
           <p> 
           <div class="row">
-<div class="col-xl-3 col-md-6 mb-4"></div>
+        <div class="col-xl-3 col-md-6 mb-4"></div>
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-6 col-md-6 mb-4">
               <div class="card border-left-primary shadow h-100 py-2">
@@ -69,12 +70,12 @@ else {
 
 
                       <?php
-$adminid=$_SESSION['aid'];
-$ret=mysqli_query($con,"select AdminName from tbladmin where ID='$adminid'");
-$row=mysqli_fetch_array($ret);
-$name=$row['AdminName'];
+                      $adminid=$_SESSION['aid'];
+                      $ret=mysqli_query($con,"select AdminName from admin where ID='$adminid'");
+                      $row=mysqli_fetch_array($ret);
+                      $name=$row['AdminName'];
 
-?>
+                      ?>
                     <center><div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $name; ?></div></center>
                     </div>
                     <div class="col-auto">
@@ -83,36 +84,22 @@ $name=$row['AdminName'];
                 </div>
               </div>
             </div>
-
-        
-
-         
           </div>
-
           <!-- Content Row -->
-
         </div>
-          
-
-         
           </div>
-
         </div>
         <!-- /.container-fluid -->
-
       </div>
       <!-- End of Main Content -->
-
-
     </div>
     <!-- End of Content Wrapper -->
-
   </div>
   <!-- End of Page Wrapper -->
 
   <!-- Scroll to Top Button-->
 
-    <i class="fas fa-angle-up"></i>
+  <i class="fas fa-angle-up"></i>
   </a>
 
   

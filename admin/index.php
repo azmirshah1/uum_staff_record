@@ -6,7 +6,7 @@ if(isset($_POST['login']))
   {
     $uname=$_POST['username'];
     $Password=$_POST['Password'];
-    $query=mysqli_query($con,"select Id from tbladmin where  AdminuserName='$uname' && Password='$Password' ");
+    $query=mysqli_query($con,"select Id from admin where  AdminuserName='$uname' && Password='$Password' ");
     $ret=mysqli_fetch_array($query);
     if($ret>0){
       $_SESSION['aid']=$ret['Id'];
